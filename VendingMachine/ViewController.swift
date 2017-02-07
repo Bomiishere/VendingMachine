@@ -168,7 +168,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         quantityStepper.value = 1
         quantityLabel.text = "1"
         
-        totalLabel.text = "For Test"
+        totalLabel.text = "$00.00"
         updateDisplayWith(totalPrice: 0, itemQuantity: 1)
         
         currentSelection = vendingMachine.selection[indexPath.row]
