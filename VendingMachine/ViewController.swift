@@ -73,7 +73,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 try vendingMachine.vend(selection: currentSelection, quantity: Int(quantityStepper.value))
                 updateDisplayWith(balance: vendingMachine.amountDeposited, totalPrice: 0.0, itemPrice: 0, itemQuantity: 1)
             } catch VendingMachineError.outOfstock {
-                showAlertWith(title: "Out of Stock", message: "This item is unavailable. Please make another selection")
+                showAlertWith(title: "Out of Stock", message: "Sorry. This item is unavailable. Please make another selection")
             } catch VendingMachineError.invalidSelection {
                 showAlertWith(title: "Invalid Selection", message: "Please make another selection")
             } catch VendingMachineError.insufficientFunds(let required) {
